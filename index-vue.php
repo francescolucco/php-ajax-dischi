@@ -29,9 +29,19 @@ AUGURI a tuttə!!! :occhiolino:  :tada::sassofono: -->
 
 <body>
   <div id="app">
-
-
-
+    <div class="container">
+      <div class="row">
+        <div 
+        v-for="(item, index) in dischi"
+        :key="index" class="col-3 p-2">
+          <div class="box">
+            <img :src="item.image" alt="">
+            <h2 class="title">{{item.title}}</h2>
+            <p>{{item.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 

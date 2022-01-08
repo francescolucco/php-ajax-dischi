@@ -3,7 +3,7 @@ const app = new Vue({
    el: '#app',
  
    data: {
-
+      dischi: [],
    },
  
    mounted(){
@@ -15,8 +15,8 @@ const app = new Vue({
       getApi(){
          axios.get('http://localhost/php-ajax-dischi/server.php')
             .then(response =>{
-              console.log(response); 
-      
+               this.dischi = response.data; 
+               console.log(this.dischi);
             })
             .catch(error =>{
                console.log(error);
